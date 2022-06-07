@@ -7,7 +7,7 @@ function firstRecurringChars1(arr) {
         }
     }
     return undefined
-}
+}// T-Complexity O(n^2) , S-Complexity O(1)
 /******************************************* */
 function firstRecurringChars2(arr) {
     let set = new Set();
@@ -19,11 +19,10 @@ function firstRecurringChars2(arr) {
         }
     }
     return undefined;
-}
-
+}// T-Complexity O(n) , S-Complexity O(n)
 const t1 = performance.now();
-console.log(firstRecurringChars1([1, 2, 3, 4, 5, 6, 7, 1, 2, 5, 4, 8]))
+console.log(firstRecurringChars1([1, 2, 3, 2, 4]))
 console.log("time without Set = ", performance.now() - t1)
 const t2 = performance.now();
-console.log(firstRecurringChars2([1, 2, 3, 4, 5, 6, 7, 1, 2, 5, 4, 8]))
+console.log(firstRecurringChars2([1, 2, 3, 2, 4]))
 console.log("time with Set = ", performance.now() - t2)
